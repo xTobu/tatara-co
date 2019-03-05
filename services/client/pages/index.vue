@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        www
+        client
       </h1>
       <h2 class="subtitle" />
       <div class="links">

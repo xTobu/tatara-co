@@ -1,7 +1,7 @@
 localhost:80 {
     gzip
     timeouts none
-    proxy / node_www:3000 {
+    proxy / node_client:3000 {
         transparent
 	}
 

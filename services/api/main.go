@@ -6,9 +6,9 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/xTobu/tatara-co/server/api/models"
-	"github.com/xTobu/tatara-co/server/api/packages/helpers"
-	"github.com/xTobu/tatara-co/server/api/packages/setting"
+	"github.com/xTobu/tatara-co/services/api/models"
+	"github.com/xTobu/tatara-co/services/api/packages/helpers"
+	"github.com/xTobu/tatara-co/services/api/packages/setting"
 )
 
 var ENV string

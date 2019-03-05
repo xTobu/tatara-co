@@ -112,6 +112,7 @@ github.com/ugorji/go v1.1.2/go.mod h1:hnLbHMwcvSihnDhEfx2/BzKp2xb0Y+ErdfYcrs9tkJ
 github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43 h1:BasDe+IErOQKrMVXab7UayvSlIpiyGwRvuX3EKYY7UA=
 github.com/ugorji/go/codec v0.0.0-20190204201341-e444a5086c43/go.mod h1:iT03XoTwV7xq/+UGwKO3UbC1nNNlopQiY61beSdrtOA=
 github.com/xTobu/tatara-co v0.0.0-20190227010630-38052577b90d h1:pQ96IIgSmszeWxm2qvJwbZA4ggNAqzPF0sHZ3fv1qZ8=
+github.com/xTobu/tatara-co v0.0.0-20190303050051-c1607c2c0ccd h1:Ghf4SM1z6M4vNmlHNEQ6b8GGhC79/6ZcSA0qwWb3C5c=
 github.com/xTobu/tatara-co/server/api v0.0.0-20190227010630-38052577b90d h1:pvlkYuHlSNnu6d8lO9SLziN6+IAG+cBJEAvKJQ9xVl0=
 github.com/ymzuiku/hit v0.0.0-20180925051203-7b3f449e5538 h1:z42VmYLcKZQ8KCz3ZYN85Ubgpqbc69ojGgJTPzWSxzE=
 github.com/ymzuiku/hit v0.0.0-20180925051203-7b3f449e5538/go.mod h1:M4eSqqTk46uUlszklsh2qMc5LnMRGzAm+Ukf1dD0crU=

@@ -1,4 +1,4 @@
-module github.com/xTobu/tatara-co/server/api
+module github.com/xTobu/tatara-co/services/api
 
 require (
 	cloud.google.com/go v0.36.0 // indirect

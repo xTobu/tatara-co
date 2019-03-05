@@ -2,34 +2,36 @@ version: "3.3"
 services:
 
   caddy:
-    container_name: app_caddy
+    container_name: tatara-caddy
+    image: tatara/caddy:latest
     build: ./.docker/caddy
-    # links:
-    #     # - node_api
-    #     - node_www
-    #     - go_api
+    links:
+        - node_client
+        - go_api
     ports:
         - "8889:80"
         # - "443:443"
-    networks:
-      - app_net
+    # networks:
+    #   - app_net
         
-  node_www:
-    container_name: app_node_www
+  node_client:
+    container_name: tatara-client
+    image: tatara/client:latest
     build:
-      context: ./server/www/
-      dockerfile: ../../.docker/node/www/Dockerfile
+      context: ./services/client/
+      dockerfile: ../../.docker/node/client/Dockerfile
     ports:
       - "3000"
     restart: always
-    tty: true 
-    networks:
-      - app_net
+    # tty: true 
+    # networks:
+    #   - app_net
 
   go_api:
-    container_name: app_go_api
+    container_name: tatara-api
+    image: tatara/api:latest
     build:
-      context: ./server/api/
+      context: ./services/api/
       dockerfile: ../../.docker/go/api/Dockerfile
     ports:
       - "3000"
@@ -38,16 +40,17 @@ services:
     privileged: true
     links:
       - mysql
-    depends_on:
-      - mysql
-    networks:
-      - app_net
+    # depends_on:
+    #   - mysql
+    # networks:
+    #   - app_net
 
   mysql:
+    container_name: tatara-mysql
+    image: tatara/mysql:latest
     build: ./.docker/mysql
-    container_name: app_mysql
     ports:
-      - "3305:3305"
+      - "3305:3306"
     volumes:
       - ./.docker/mysql/data:/var/lib/mysql
       - ./.docker/mysql/my.cnf:/etc/my.cnf
@@ -55,10 +58,10 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: myapp
     restart: always
-    tty: true
-    networks:
-      - app_net
+    # tty: true
+    # networks:
+    #   - app_net
 
-networks:
-  app_net:
-    driver: bridge
+# networks:
+#   app_net:
+#     driver: bridge
