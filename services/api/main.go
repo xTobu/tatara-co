@@ -11,6 +11,7 @@ import (
 	"github.com/xTobu/tatara-co/services/api/packages/setting"
 )
 
+// ENV 取得環境變數 -ldflags "-X main.ENV=production"
 var ENV string
 
 func main() {
